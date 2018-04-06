@@ -7,7 +7,7 @@ if (window.__INITIAL_STATE__) {
 }
 
 router.onReady(() => {
-    router.beforeResolve((to, from, next) => {
+	router.beforeResolve((to, from, next) => {
 		const matched = router.getMatchedComponents(to)
 		const prevMatched = router.getMatchedComponents(from)
    
@@ -22,7 +22,7 @@ router.onReady(() => {
 	
 		Promise.all(activated.map(c => {
 			if (c.asyncData) {
-			return c.asyncData({ store, route: to })
+				return c.asyncData({ store, route: to })
 			}
 		})).then(() => {
 			next()

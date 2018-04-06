@@ -1,6 +1,5 @@
 <template>
     <div id="app">
-        Hello World!
         <p>
             <router-link to="/">Go To Home</router-link>
             <router-link to="/about">Go To About</router-link>
@@ -9,7 +8,10 @@
     </div>
 </template>
 <script>
-    export default {
-
-    };
+  export default {
+    name: 'App',
+    metaInfo: {
+        title: 'Default Title'
+    }
+  }
 </script>

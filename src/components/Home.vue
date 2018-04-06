@@ -21,6 +21,17 @@ export default {
         })
     },
     methods: {
+    },
+    metaInfo: {
+        title: 'My Awesome Webapp',
+        meta: [
+            { charset: 'utf-8' },
+            {
+                'vmid': 'og:description',
+                'property': 'og:description',
+                'content': 'Test description'
+            }
+        ]
     }
 }
 </script>
