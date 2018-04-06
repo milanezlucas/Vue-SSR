@@ -10,11 +10,24 @@ export function createRouter () {
 	return new Router({
 		mode: 'history',
 		routes: [
-		{
-			path: '/',
-			component: Home
-		},
-		{ path: '/about', component: About }
+			{
+				path: '/',
+				component: Home,
+				meta: {
+					title: 'Home Title - Vue SSR',
+					metaTags: [
+						{
+							name: 'description',
+							content: 'The home page of our example app.'
+						},
+						{
+							property: 'og:description',
+							content: 'The home page of our example app.'
+						}
+					]
+				}
+			},
+			{ path: '/about', component: About }
 		]
 	});
 }

@@ -14,7 +14,7 @@ export default {
         }
     },
     mounted: function() {
-        this.$store.dispatch("fetchTitle").then(response => {
+        this.$store.dispatch('fetchTitle').then(response => {
             this.homeText = this.$store.state.title
         }, error => {
             this.homeText = 'Error'
